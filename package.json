@@ -1,33 +1,45 @@
 {
   "name": "angular2-components-library",
-  "version": "0.0.1",
-  "description": "",
-  "main": "angular2-components-library.js",
+  "version": "0.1.0",
   "scripts": {
-    "watch": "tsc -p src -w",
-    "build": "rm -rf lib && tsc -p src"
+    "lint": "tslint src/**/*.ts",
+    "test": "tsc && karma start",
+    "postinstall": "typings install",
+    "prepublish": "tsc",
+    "tsc": "tsc",
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gtsopour/angular2-components-library.git"
+    "url": "https://github.com/gtsopour/angular2-components-library"
+  },
+  "author": {
+    "name": "George Tsopouridis",
+    "email": "george.tsopouridis@haufe.com"
   },
   "keywords": [
-    "Angular",
-    "2",
-    "Library"
+    "angular",
+    "angular2"
   ],
-  "author": "gtsopour@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gtsopour/angular2-components-library/issues"
   },
-  "homepage": "https://github.com/gtsopour/angular2-components-library#readme",
-  "devDependencies": {
-    "@types/core-js": "^0.9.34",
-    "typescript": "^2.0.8"
-  },
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "dependencies": {
+  },
+  "devDependencies": {
     "@angular/core": "^2.0.0",
-    "rxjs": "5.0.0-beta.12"
+    "@angular/common": "^2.0.0",
+    "codelyzer": "^0.0.20",
+    "rxjs": "5.0.0-beta.12",
+    "tslint": "^3.15.1",
+    "typescript": "2.0.2",
+    "typings":"^1.0.4",
+    "zone.js": "0.6.23"
+  },
+  "engines": {
+    "node": ">=0.8.0"
   }
 }
